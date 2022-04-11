@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const Players = require('./models/Players');
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
