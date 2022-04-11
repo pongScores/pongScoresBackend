@@ -27,7 +27,7 @@ router.get('/:id', async (req, res, next) => {
 // CREATE a player
 router.post('/', async (req, res, next) => {
 	try {
-		await Player.create(req.body);
+		await Players.create(req.body);
 		const allPlayers = await Players.find({});
 		res.status(201).json(allPlayers);
 	} catch (error) {
@@ -44,6 +44,23 @@ router.put('/:id', async (req, res, next) => {
 		});
 		const allPlayers = await Players.find({});
 		res.json(allPlayers);
+	} catch (error) {
+		next(error);
+	}
+});
+
+// Delete a player
+router.delete('/:id', async (req, res, next) => {
+	try {
+		const deletedPlayer = await Players.findOneAndDelete({
+			_id: req.params.id,
+		});
+		if (deletedPlayer) {
+			const allPlayers = await Players.find({});
+			res.json(allPlayers);
+		} else {
+			res.status(404);
+		}
 	} catch (error) {
 		next(error);
 	}
