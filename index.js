@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 // const Players = require('./models/Players');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.json());
@@ -34,8 +34,8 @@ const playersController = require('./controllers/playersController');
 app.use('/players', playersController);
 
 // Server Start
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 
-app.listen(3000, () => {
-	console.log('app now listening on port 3000 🏓');
+app.listen(4000, () => {
+	console.log('app now listening on port 4000 🏓');
 });
