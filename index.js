@@ -1,6 +1,9 @@
 // Dependencies
 
 const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
 const app = express();
 const cors = require('cors');
 // const Players = require('./models/Players');
@@ -10,6 +13,14 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+// Bodyparser middleware
+app.use(
+	bodyParser.urlencoded({
+		extended: false,
+	})
+);
+app.use(bodyParser.json());
 
 // Redirect
 app.get('/', (req, res) => {
