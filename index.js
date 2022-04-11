@@ -36,6 +36,6 @@ app.use('/players', playersController);
 // Server Start
 app.set('port', process.env.PORT || 4000);
 
-app.listen(4000, () => {
-	console.log('app now listening on port 4000 🏓');
+app.listen(app.get('port'), () => {
+	console.log(`app now listening on: ${app.get('port')} 🏓'`);
 });
