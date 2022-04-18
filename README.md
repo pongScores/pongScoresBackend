@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# pongScores-Backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the Backend to the pongScores App. See the Frontend readme for more information:
+https://github.com/pongScores/pongScoresFrontEnd
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+pongScores is a website designed for Table Tennis Players and Tournament, and League Organizers. The website keeps track of players' match results. Players, coaches, and tournament organizers will be able to keep track of players' match records with an easy to access database. Rating tracker and automatic rating calculator coming in the future. Stay tuned!
 
-### `npm start`
+This backend fetches data here:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> https://fierce-shelf-71912.herokuapp.com/players
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+and communicates with the frontend stored data at:
 
-### `npm test`
+> https://pongscores.netlify.app/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sample Backend Data:
 
-### `npm run build`
+```
+{
+"_id": "625ce82c35bad4c2d7dfbd2b",
+"name": "Krenko",
+"rating": 1400,
+"wins": 2,
+"losses": 2,
+"__v": 0
+},
+{
+"_id": "625ceb62768919d3150bdf42",
+"name": "Cloudy",
+"wins": 2,
+"losses": 1,
+"__v": 0
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Backend has the CRUD functionality with GET, POST, PUT, and DELETE routes. The Frontend has functionality to access these CRUD functions.
+- The data is stored in a live server with continuous deployment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- Mongoose
+- Express
+- Node.js
+- Cors
+- Whimsical.com for Wireframes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Request and Response Diagram
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Coming Soon!
